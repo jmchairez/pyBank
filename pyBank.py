@@ -45,3 +45,15 @@ print(f"Average Change: ${revenue}")
 print(f"Greatest Increase in Profits: {str(months[average_change.index(max(average_change))+1])} ${str(greatest_increase)}")
 print(f"Greatest Decrease in Profits: {str(months[average_change.index(min(average_change))+1])} ${str(greatest_decrease)}")
 
+#export resutls to a text file
+file = open("results_pyBank", "w")
+
+file.write("Financial Analysis")
+file.write("\n-------------------------")
+file.write(f"\nTotal Months: {num_rows}")    
+file.write(f"\nTotal Profit: ${sum(profit)}")
+file.write(f"\nAverage Change: ${revenue}")
+file.write(f"\nGreatest Increase in Profits: {str(months[average_change.index(max(average_change))+1])} ${str(greatest_increase)}")
+file.write(f"\nGreatest Decrease in Profits: {str(months[average_change.index(min(average_change))+1])} ${str(greatest_decrease)}")
+
+file.close()
