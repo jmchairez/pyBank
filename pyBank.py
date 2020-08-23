@@ -38,3 +38,10 @@ with open(bank_csv) as csv_file:
     greatest_increase = max(average_change)
     greatest_decrease = min(average_change)
 
+#Print the final script
+print(f"Total Months: {num_rows}")    
+print(f"Total Profit: ${sum(profit)}")
+print(f"Average Change: ${revenue}")
+print(f"Greatest Increase in Profits: {str(months[average_change.index(max(average_change))+1])} ${str(greatest_increase)}")
+print(f"Greatest Decrease in Profits: {str(months[average_change.index(min(average_change))+1])} ${str(greatest_decrease)}")
+
